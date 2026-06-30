@@ -1,0 +1,1400 @@
+{
+  "Seashell": {
+    "rarity": "Common",
+    "maxWeight": 20,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Amethyst": {
+    "rarity": "Common",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Blue Ice": {
+    "rarity": "Common",
+    "maxWeight": 40,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Copper": {
+    "rarity": "Common",
+    "maxWeight": 60,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.04,
+      0,
+      0,
+      0
+    ]
+  },
+  "Gold": {
+    "rarity": "Common",
+    "maxWeight": 40,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Obsidian": {
+    "rarity": "Common",
+    "maxWeight": 30,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.04,
+      0,
+      0,
+      0
+    ]
+  },
+  "Pearl": {
+    "rarity": "Common",
+    "maxWeight": 20,
+    "boosts": [
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Platinum": {
+    "rarity": "Common",
+    "maxWeight": 40,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Pyrite": {
+    "rarity": "Common",
+    "maxWeight": 60,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Silver": {
+    "rarity": "Common",
+    "maxWeight": 40,
+    "boosts": [
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Coral": {
+    "rarity": "Uncommon",
+    "maxWeight": 10,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Electrum": {
+    "rarity": "Uncommon",
+    "maxWeight": 40,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Glowberry": {
+    "rarity": "Uncommon",
+    "maxWeight": 40,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Malachite": {
+    "rarity": "Uncommon",
+    "maxWeight": 20,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Neodymium": {
+    "rarity": "Uncommon",
+    "maxWeight": 40,
+    "boosts": [
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Nickel": {
+    "rarity": "Uncommon",
+    "maxWeight": 40,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Rock Candy": {
+    "rarity": "Uncommon",
+    "maxWeight": 60,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Sapphire": {
+    "rarity": "Uncommon",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Smoky Quartz": {
+    "rarity": "Uncommon",
+    "maxWeight": 20,
+    "boosts": [
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Titanium": {
+    "rarity": "Uncommon",
+    "maxWeight": 40,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Topaz": {
+    "rarity": "Uncommon",
+    "maxWeight": 20,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.08,
+      0,
+      0,
+      0
+    ]
+  },
+  "Zircon": {
+    "rarity": "Uncommon",
+    "maxWeight": 20,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.05,
+      0,
+      0,
+      0
+    ]
+  },
+  "Amber": {
+    "rarity": "Rare",
+    "maxWeight": 20,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Azuralite": {
+    "rarity": "Rare",
+    "maxWeight": 30,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Candy Cane": {
+    "rarity": "Rare",
+    "maxWeight": 40,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.09,
+      0,
+      0,
+      0
+    ]
+  },
+  "Diopside": {
+    "rarity": "Rare",
+    "maxWeight": 20,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Glacial Quartz": {
+    "rarity": "Rare",
+    "maxWeight": 40,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Gloomberry": {
+    "rarity": "Rare",
+    "maxWeight": 40,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Jade": {
+    "rarity": "Rare",
+    "maxWeight": 40,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Lapis Lazuli": {
+    "rarity": "Rare",
+    "maxWeight": 30,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Meteroic Iron": {
+    "rarity": "Rare",
+    "maxWeight": 40,
+    "boosts": [
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Onyx": {
+    "rarity": "Rare",
+    "maxWeight": 30,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Peridot": {
+    "rarity": "Rare",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Pyrelith": {
+    "rarity": "Rare",
+    "maxWeight": 30,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Ruby": {
+    "rarity": "Rare",
+    "maxWeight": 20,
+    "boosts": [
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Silver Clamshell": {
+    "rarity": "Rare",
+    "maxWeight": 20,
+    "boosts": [
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.13,
+      0,
+      0,
+      0
+    ]
+  },
+  "Ammonite Fossil": {
+    "rarity": "Epic",
+    "maxWeight": 50,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Ashvein": {
+    "rarity": "Epic",
+    "maxWeight": 20,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.14,
+      0,
+      0,
+      0
+    ]
+  },
+  "Aurorite": {
+    "rarity": "Epic",
+    "maxWeight": 30,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Bone": {
+    "rarity": "Epic",
+    "maxWeight": 50,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.14,
+      0,
+      0,
+      0
+    ]
+  },
+  "Borealite": {
+    "rarity": "Epic",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Cobalt": {
+    "rarity": "Epic",
+    "maxWeight": 40,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Emerald": {
+    "rarity": "Epic",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Glowmoss": {
+    "rarity": "Epic",
+    "maxWeight": 60,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Golden Pearl": {
+    "rarity": "Epic",
+    "maxWeight": 20,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Iridium": {
+    "rarity": "Epic",
+    "maxWeight": 40,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Lightshard": {
+    "rarity": "Epic",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Mercury": {
+    "rarity": "Epic",
+    "maxWeight": 80,
+    "boosts": [
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Meteroic Gold": {
+    "rarity": "Epic",
+    "maxWeight": 40,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Moonstone": {
+    "rarity": "Epic",
+    "maxWeight": 50,
+    "boosts": [
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Opal": {
+    "rarity": "Epic",
+    "maxWeight": 20,
+    "boosts": [
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Osmium": {
+    "rarity": "Epic",
+    "maxWeight": 80,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Pyronium": {
+    "rarity": "Epic",
+    "maxWeight": 50,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.2,
+      0,
+      0,
+      0
+    ]
+  },
+  "Aetherite": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Aquamarine": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Bismuth": {
+    "rarity": "Legendary",
+    "maxWeight": 80,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Catseye": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Cinnabar": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.21,
+      0,
+      0,
+      0
+    ]
+  },
+  "Depleted Shard": {
+    "rarity": "Legendary",
+    "maxWeight": 40,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.21,
+      0,
+      0,
+      0
+    ]
+  },
+  "Diamond": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Dragon Bone": {
+    "rarity": "Legendary",
+    "maxWeight": 50,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.21,
+      0,
+      0,
+      0
+    ]
+  },
+  "Fire Opal": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.21,
+      0,
+      0,
+      0
+    ]
+  },
+  "Firefly Stone": {
+    "rarity": "Legendary",
+    "maxWeight": 60,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Gloomcap": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Lost Soul": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Luminum": {
+    "rarity": "Legendary",
+    "maxWeight": 40,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Nautilus Shell": {
+    "rarity": "Legendary",
+    "maxWeight": 50,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Palladium": {
+    "rarity": "Legendary",
+    "maxWeight": 40,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Peppermint Prism": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Rose Gold": {
+    "rarity": "Legendary",
+    "maxWeight": 40,
+    "boosts": [
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Specterite": {
+    "rarity": "Legendary",
+    "maxWeight": 10,
+    "boosts": [
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Starshine": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed",
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.15,
+      0.15,
+      0,
+      0
+    ]
+  },
+  "Tourmaline": {
+    "rarity": "Legendary",
+    "maxWeight": 24,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Uranium": {
+    "rarity": "Legendary",
+    "maxWeight": 60,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Volcanic Key": {
+    "rarity": "Legendary",
+    "maxWeight": 20,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.21,
+      0,
+      0,
+      0
+    ]
+  },
+  "Radium": {
+    "rarity": "Legendary",
+    "maxWeight": 60,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "Aetherium": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Chrysoberyl": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "DigStrength"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Flarebloom": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck",
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.75,
+      -0.5,
+      0,
+      0
+    ]
+  },
+  "Frostshard": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "DigStrength"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Inferlume": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Mythril": {
+    "rarity": "Mythic",
+    "maxWeight": 60,
+    "boosts": [
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Painite": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.35,
+      0,
+      0,
+      0
+    ]
+  },
+  "Pink Diamond": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Prismara": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck",
+      "Capacity",
+      "DigStrength",
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  "Radiant Gold": {
+    "rarity": "Mythic",
+    "maxWeight": 60,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Red Beryl": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.35,
+      0,
+      0,
+      0
+    ]
+  },
+  "Star Garnet": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.35,
+      0,
+      0,
+      0
+    ]
+  },
+  "Sunstone": {
+    "rarity": "Mythic",
+    "maxWeight": 40,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Volcanic Core": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "DigStrength",
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.25,
+      0.2,
+      0,
+      0
+    ]
+  },
+  "Vortessence": {
+    "rarity": "Mythic",
+    "maxWeight": 20,
+    "boosts": [
+      "Capacity"
+    ],
+    "boostMults": [
+      0.5,
+      0,
+      0,
+      0
+    ]
+  },
+  "Adamantine": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "ModBoost"
+    ],
+    "boostMults": [
+      0.8,
+      0,
+      0,
+      0
+    ]
+  },
+  "Astral Spore": {
+    "rarity": "Exotic",
+    "maxWeight": 20,
+    "boosts": [
+      "DigSpeed"
+    ],
+    "boostMults": [
+      0.8,
+      0,
+      0,
+      0
+    ]
+  },
+  "Bloodstone": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.56,
+      0,
+      0,
+      0
+    ]
+  },
+  "Celestium": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "Luck",
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.48,
+      0.48,
+      0,
+      0
+    ]
+  },
+  "Cryonic Artifact": {
+    "rarity": "Exotic",
+    "maxWeight": 20,
+    "boosts": [
+      "DigStrength",
+      "ShakeStrength",
+      "DigSpeed",
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      1.2,
+      1.2,
+      -0.8,
+      -0.8
+    ]
+  },
+  "Dinosaur Skull": {
+    "rarity": "Exotic",
+    "maxWeight": 100,
+    "boosts": [
+      "SellBoost",
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.4,
+      0.32,
+      0,
+      0
+    ]
+  },
+  "Eternium": {
+    "rarity": "Exotic",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck",
+      "DigSpeed",
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.32,
+      0.32,
+      0.32,
+      0
+    ]
+  },
+  "Forgotten Totem": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "SellBoost"
+    ],
+    "boostMults": [
+      0.8,
+      0,
+      0,
+      0
+    ]
+  },
+  "North Star": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "Luck",
+      "Capacity",
+      "DigSpeed",
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ]
+  },
+  "Pumpkin Soul": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.56,
+      0,
+      0,
+      0
+    ]
+  },
+  "Singularium": {
+    "rarity": "Exotic",
+    "maxWeight": 100,
+    "boosts": [
+      "Capacity",
+      "SizeBoost"
+    ],
+    "boostMults": [
+      0.48,
+      0.48,
+      0,
+      0
+    ]
+  },
+  "Starpiercer": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "DigStrength",
+      "ShakeStrength"
+    ],
+    "boostMults": [
+      0.47,
+      0.47,
+      0,
+      0
+    ]
+  },
+  "Umbrite": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "DigSpeed",
+      "ShakeSpeed"
+    ],
+    "boostMults": [
+      0.4,
+      0.4,
+      0,
+      0
+    ]
+  },
+  "Vineheart": {
+    "rarity": "Exotic",
+    "maxWeight": 40,
+    "boosts": [
+      "Luck"
+    ],
+    "boostMults": [
+      0.8,
+      0,
+      0,
+      0
+    ]
+  },
+  "Voidstone": {
+    "rarity": "Exotic",
+    "maxWeight": 20,
+    "boosts": [
+      "Luck",
+      "Capacity"
+    ],
+    "boostMults": [
+      0.4,
+      0.4,
+      0,
+      0
+    ]
+  }
+}

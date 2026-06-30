@@ -1,0 +1,27 @@
+{
+    "modifiers": {
+        "Perfect": [ "Luck", "Capacity", "SizeBoost" ],
+        "Treasured": [ "Luck" ],
+        "Lunar": [ "DigSpeed", "ShakeSpeed", "WalkSpeed" ],
+        "Voidtorn": [ "Luck", "Capacity" ],
+        "Mutated": [ "Luck", "DigStrength", "ModBoost" ],
+        "Cosmic": [ "Capacity", "ShakeStrength" ],
+        "Electrified": [ "DigSpeed", "ShakeSpeed" ],
+        "Iridescent": [ "Luck" ],
+        "Crystalline": [ "SizeBoost" ],
+        "Irradiated": [ "ModBoost" ],
+        "Scorching": [ "DigStrength" ],
+        "Glowing": [ "ShakeSpeed" ],
+        "Pure": [ "DigSpeed" ],
+        "Shiny": [ "ShakeStrength" ]
+    },
+    "rarityMods": {
+        "Common": 0.005,
+        "Uncommon": 0.0075,
+        "Rare": 0.0125,
+        "Epic": 0.02,
+        "Legendary": 0.03,
+        "Mythic": 0.05,
+        "Exotic": 0.08
+    }
+}

@@ -1,0 +1,628 @@
+:root {
+  --page-background: RGBA(32, 32, 32, 1);
+  --room-background: RGBA(255, 255, 255, .1);
+  --button-background: RGBA(32, 32, 32, 0.5);
+  --button-background-hover: RGBA(255, 255, 255, .01);
+  --tab-background: RGBA(255, 255, 255, .1);
+  --tab-background-hover: RGBA(255, 255, 255, .2);
+  --text-light: #f2f2f2;
+
+  --gem-size: 92px;
+  --gem-icon-size: 72px;
+  --gem-gap: 21px;
+  --column-gap: 21px;
+  --wing-col-gap: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  background: var(--page-background);
+  color: var(--text-light);
+  font-family: Roboto, sans-serif;
+  font-weight: bolder;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+}
+
+.museum-tabs {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.tab {
+  min-width: 100px;
+  height: 30px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--room-background);
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Roboto, sans-serif;
+  line-height: 1;
+}
+.tab.is-active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-add {
+  min-width: 27px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tab:hover,
+.tab:focus-visible {
+  background: var(--tab-background-hover);
+}
+
+#share-button {
+  margin-left: auto;
+  width: auto;
+  height: 30px;
+  fill: #888;
+  cursor: pointer;
+  padding: 4px;
+  transition: fill 140ms ease, transform 140ms ease;
+}
+
+#share-button:hover {
+  fill: var(--text-light);
+  transform: scale(1.05);
+}
+
+.tab:focus-visible,
+.gem-button:focus-visible {
+  outline: 2px solid #c9d5ff;
+  outline-offset: 3px;
+}
+
+.stage-scroll {
+  flex-grow: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.museum-room {
+  position: relative;
+  min-width: 1120px;
+  margin: 0 auto;
+  min-height: 100%;
+  border-radius: 6px;
+  background: var(--room-background);
+}
+
+.museum-footer {
+  height: 50px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.footer-link {
+  text-decoration: underline;
+  color: var(--text-light);
+}
+
+.svg-symbols {
+  display: none;
+}
+
+.gem-group {
+  position: absolute;
+  display: flex;
+  gap: var(--gem-gap);
+}
+
+.gem-row {
+  flex-direction: row;
+}
+
+.gem-column {
+  flex-direction: column;
+  gap: var(--column-gap);
+}
+
+.group-top {
+  top: 35px;
+  left: calc(50% - 159px);
+}
+
+.group-center-legendary {
+  top: 262px;
+  left: calc(50% - 159px);
+}
+
+.group-left-common {
+  top: 181px;
+  left: 5%;
+}
+
+.group-left-uncommon {
+  top: 181px;
+  left: calc(5% + var(--gem-size) + var(--wing-col-gap));
+}
+
+.group-right-rare {
+  top: 181px;
+  right: 5%;
+  left: auto;
+}
+
+.group-right-epic {
+  top: 181px;
+  right: calc(5% + var(--gem-size) + var(--wing-col-gap));
+  left: auto;
+}
+
+/*
+  Gem buttons are ready for click behavior, but no JavaScript behavior has
+  been attached yet. Future JS can read data-gem or fill data-info.
+*/
+.gem-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--gem-size);
+  height: var(--gem-size);
+  padding: 10px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--button-background);
+  color: #777;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+
+.gem-button:hover,
+.gem-button:focus-visible {
+  background: var(--button-background-hover);
+  box-shadow: 0 7px 18px rgb(0 0 0 / 18%);
+  transform: translateY(-1px);
+}
+
+.gem-icon {
+  width: var(--gem-icon-size);
+  height: var(--gem-icon-size);
+  fill: currentColor;
+}
+
+.gem-common {
+  color: #FCFCFC;
+}
+
+.gem-uncommon {
+  color: #6DF544;
+}
+
+.gem-mythic {
+  color: #ED0B92;
+}
+
+.gem-exotic {
+  color: #ED0104;
+}
+
+.gem-legendary {
+  color: #EDC602;
+}
+
+.gem-epic {
+  color: #8338ED;
+}
+
+.gem-rare {
+  color: #2C69ED;
+}
+
+.gem-button[data-info]::after {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  z-index: 50;
+  max-width: none;
+  width: max-content;
+  white-space: pre;
+
+  padding: 7px 11px;
+  border-radius: 6px;
+  background: rgb(24 24 24 / 92%);
+  color: var(--text-light);
+  content: attr(data-info);
+  font-size: 11px;
+  line-height: 1.35;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  transition:
+      opacity 140ms ease,
+      transform 140ms ease;
+  text-align: left;
+}
+
+.gem-button[data-info]:not([data-info=""]):hover::after,
+.gem-button[data-info]:not([data-info=""]):focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.gem-button[data-info].tooltip-flipped::after {
+  bottom: auto;
+  top: calc(100% + 8px);
+  transform: translate(-50%, -4px);
+}
+
+.gem-button[data-info].tooltip-flipped:hover::after,
+.gem-button[data-info].tooltip-flipped:focus-visible::after {
+  transform: translate(-50%, 0);
+}
+
+.gem-text-overlay {
+  position: absolute;
+  color: var(--text-light);
+}
+
+.gem-type-line {
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.museum-info {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 164px);
+  width: 328px;
+  height: 226px;
+  border-radius: 6px 6px 0 0;
+  background: var(--button-background);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+#museum-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+#museum-info-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  right: 10px;
+  gap: 5px;
+}
+
+.museum-info-button {
+  fill: var(--text-light);
+  height: 100%;
+  cursor: pointer;
+  transition: fill 140ms ease;
+}
+
+.museum-info-button:hover {
+  fill: #fff !important;
+}
+
+#museum-info-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1;
+  margin-top: 4px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-family: Roboto, sans-serif;
+  font-weight: bolder;
+}
+
+.info-row-label {
+  color: #8a8a8a;
+}
+
+.stat-pos {
+  color: #6DF544;
+  text-shadow: 0 0 4px rgba(109, 245, 68, 0.15);
+  font-weight: bold;
+}
+
+.stat-neg {
+  color: #FF4A4A;
+  text-shadow: 0 0 4px rgba(255, 74, 74, 0.15);
+  font-weight: bold;
+}
+
+.gem-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px); /* Sleek translucent glass effect */
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.gem-modal-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gem-modal-content {
+  background: #202020;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  width: 340px;
+  padding: 16px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.gem-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 4px;
+  flex-direction: row;
+}
+
+#gem-modal-title {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--text-light);
+}
+
+.gem-modal-button {
+  background: none;
+  border: 0;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 140ms ease;
+}
+
+.gem-modal--button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.modal-button {
+  width: 14px;
+  height: 14px;
+  fill: #888;
+  transition: fill 140ms ease;
+}
+
+.modal-button:hover {
+  fill: #fff;
+}
+
+.editor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.editor-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editor-row label {
+  font-size: 13px;
+  color: #bbb;
+  font-weight: normal;
+}
+
+.editor-input {
+  background: #161616;
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 13px;
+  width: 160px;
+  font-family: Roboto, sans-serif;
+}
+
+/* Slightly wider modal window footprint to display data strings */
+.share-modal-width {
+  width: 440px !important;
+}
+
+.share-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.share-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.share-section label {
+  font-size: 13px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.share-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.share-field {
+  flex: 1;
+  width: 100% !important;
+  font-family: monospace !important;
+  font-size: 12px !important;
+  background: #111 !important;
+  color: #aaa !important;
+}
+
+.share-action-button {
+  background: #2a6df4;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.share-action-button:hover {
+  background: #4682f7;
+}
+
+.share-action-button.import-theme {
+  background: #28a745;
+}
+
+.share-action-button.import-theme:hover {
+  background: #218838;
+}
+
+.share-divider {
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 4px 0;
+}
+
+.import-status-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  min-height: 16px;
+}
+
+.settings-modal-width {
+  width: 360px !important;
+}
+
+.settings-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.settings-action-button {
+  background: #2a6df4;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0 14px;
+  height: 32px;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+.settings-action-button:hover {
+  background: #4682f7;
+  cursor: pointer;
+}
+
+/* Distinct high-contrast structural warning layout button */
+.settings-danger-button {
+  background: transparent;
+  color: #ff4a4a;
+  border: 1px solid rgba(255, 74, 74, 0.3);
+  border-radius: 4px;
+  padding: 0 14px;
+  height: 32px;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease;
+}
+
+.settings-danger-button:hover {
+  background: rgba(255, 74, 74, 0.12);
+  border-color: #ff4a4a;
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --gem-size: 78px;
+    --gem-icon-size: 61px;
+    --gem-gap: 17px;
+    --column-gap: 17px;
+  }
+
+  .museum-room {
+    min-height: 600px;
+  }
+
+  .gem-info-panel {
+    width: 280px;
+    height: 190px;
+  }
+}

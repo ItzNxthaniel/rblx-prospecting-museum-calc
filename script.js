@@ -31,7 +31,6 @@ function switchMuseum(museumId) {
   AppState.activeMuseumId = museumId;
   saveToLocalStorage();
 
-  // 1. Visual Tab Synchronization
   document.querySelectorAll(".museum-tabs .tab").forEach(tab => {
     tab.classList.remove("is-active");
   });

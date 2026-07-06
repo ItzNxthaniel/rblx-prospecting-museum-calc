@@ -501,10 +501,14 @@ function openEditorModal(slotId) {
 
   const gemData = currentMuseum.gems[slotId];
 
+  const filteredCurrentGems = Object.entries(currentMuseum.gems).filter(([slotId, gemData]) => {
+    return slotId.startsWith(slotPrefix) && gemData.name !== "None";
+  });
+
   let oreOptions = `<option value="None">None (Empty)</option>`;
   if (ORE_REGISTRY) {
     Object.entries(ORE_REGISTRY).forEach(([oreName, oreConfig]) => {
-      if (oreConfig["rarity"] === targetRarity) {
+      if (oreConfig["rarity"] === targetRarity && !filteredCurrentGems.some(([_, gemData]) => gemData.name === oreName)) {
         oreOptions += `<option value="${oreName}" ${gemData.name === oreName ? 'selected' : ''}>${oreName}</option>`;
       }
     })

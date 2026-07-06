@@ -21,6 +21,8 @@ let AppState = {
   museums: {}
 }
 
+let warnings = {}
+
 let ALL_GEM_SLOTS = [];
 function discoverGemSlots() {
   const slots = document.querySelectorAll(".gem-button[data-gem]");
@@ -446,6 +448,26 @@ function bindPedestalListeners() {
   }
 }
 
+function updateNotice() {
+  let noticeElement = document.getElementById("notice-warning");
+
+  if (Object.keys(warnings).length === 0) {
+    noticeElement.classList.remove("is-active");
+    return;
+  }
+
+  const lines = [];
+  for (const [slotId, warning] of Object.entries(warnings)) {
+    let prefix = slotId.split("-")[0];
+    let prefixRarity = prefix.charAt(0).toUpperCase() + prefix.slice(1);
+
+    lines.push(`${prefixRarity}: ${warning}`);
+  }
+
+  noticeElement.setAttribute("data-info", lines.join("\n"));
+  noticeElement.classList.add("is-active");
+}
+
 function refreshPedestalsOnly() {
   const currentMuseum = AppState.museums[AppState.activeMuseumId];
   if (!currentMuseum) return;
@@ -469,6 +491,12 @@ function refreshPedestalsOnly() {
         tooltipText = lines.join("\n");
       }
 
+      if (gemData.weight > ORE_REGISTRY[gemData.name].maxWeight) {
+        gemButton.classList.add("warning");
+        warnings[slotId] = `Your ${gemData.name} is overweight. Stats will only be calculated up to ${ORE_REGISTRY[gemData.name].maxWeight}kg.`;
+        updateNotice();
+      }
+
       gemButton.setAttribute("data-info", tooltipText);
 
       if (slotId.startsWith("exotic-") || slotId.startsWith("mythic-")) {
@@ -490,7 +518,11 @@ function refreshPedestalsOnly() {
       `;
     } else {
       gemButton.setAttribute("data-info", "");
+      gemButton.classList.remove("warning");
       gemButton.classList.remove("tooltip-flipped");
+
+      delete warnings[slotId];
+      updateNotice();
 
       gemButton.innerHTML = `
         <svg class="gem-icon" aria-hidden="true" focusable="false">

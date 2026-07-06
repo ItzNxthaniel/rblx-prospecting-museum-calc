@@ -194,6 +194,10 @@ body {
     transform 140ms ease;
 }
 
+.gem-button.warning {
+  box-shadow: 0 0 15px 5px #ED7602;
+}
+
 .gem-button:hover,
 .gem-button:focus-visible {
   background: var(--button-background-hover);
@@ -301,6 +305,49 @@ body {
   display: flex;
   flex-direction: column;
   padding: 12px;
+}
+
+#notice-warning {
+  display: none;
+  position: absolute;
+  top: -40px;
+  text-align: center;
+  text-decoration: underline;
+  width: calc(328px - 13px - 12px);
+  color: #ED7602;
+  cursor: help;
+  font-weight: bold;
+}
+
+#notice-warning.is-active {
+  display: block;
+}
+
+#notice-warning[data-info]:hover::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+
+  background: var(--page-background, #1a1a1a);
+  color: #ED7602;
+  border: 1px solid rgba(237, 118, 2, 0.4);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+
+  white-space: pre-wrap;
+  width: max-content;
+  max-width: 500px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+
+  pointer-events: none;
+  z-index: 100;
 }
 
 #museum-info-header {

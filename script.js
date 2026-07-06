@@ -661,6 +661,14 @@ function handleModalFormUpdate() {
     gemData.weight = parseFloat(document.getElementById("edit-weight").value) || 0.00;
 
     gemData.calculated = calculateSingleGemBoost(gemData);
+
+    if (gemData.weight > ORE_REGISTRY[gemData.name].maxWeight) {
+      warnings[activeEditingSlotId] = `Your ${gemData.name} is overweight. Stats will only be calculated up to ${ORE_REGISTRY[gemData.name].maxWeight}kg.`;
+    } else {
+      document.querySelector(`.gem-button[data-gem="${activeEditingSlotId}"]`).classList.remove("warning");
+      delete warnings[activeEditingSlotId];
+      updateNotice();
+    }
   }
 
   saveToLocalStorage();

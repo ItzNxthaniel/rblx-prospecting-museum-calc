@@ -41,6 +41,7 @@ function switchMuseum(museumId) {
   }
 
   closeEditorModal();
+  initTabsUI();
   refreshPedestalsOnly();
   aggregateGlobalStats();
 }
@@ -162,7 +163,10 @@ function bindActionButtons() {
       const outputField = document.getElementById("share-code-output");
       if (outputField) {
         outputField.select();
-        navigator.clipboard.writeText(outputField.value);
+        const url = new URL(window.location.href);
+        url.searchParams.set("import", outputField.value);
+
+        navigator.clipboard.writeText(url.toString());
 
         copyBtn.innerText = "Copied!";
         setTimeout(() => {
@@ -279,12 +283,28 @@ function closeShareModal() {
   if (shareOverlay) shareOverlay.classList.remove("is-active");
 }
 
-function handleMuseumImport() {
+function handleMuseumImport(_, importCode = null) {
   const inputField = document.getElementById("import-code-input");
   const statusMsg = document.getElementById("import-status-msg");
   if (!inputField || !statusMsg) return;
 
-  const rawCode = inputField.value.trim();
+  let rawCode = null;
+  if (importCode !== null) {
+    rawCode = importCode.trim();
+  } else {
+    let inputValue = inputField.value.trim();
+
+    try {
+      let url = new URL(inputValue);
+
+      if (url.searchParams.get("import")) {
+        rawCode = url.searchParams.get("import");
+      }
+    } catch (err) {
+      rawCode = inputValue;
+    }
+  }
+
   if (!rawCode) {
     statusMsg.style.color = "#ff4a4a";
     statusMsg.innerText = "Please enter a valid code.";
@@ -328,21 +348,26 @@ function handleMuseumImport() {
         }
       });
 
-      AppState.museums[`museum-${Date.now()}`] = importedMuseum;
+      let museumId = `museum-${Date.now()}`;
+      AppState.museums[museumId] = importedMuseum;
 
       saveToLocalStorage();
-      initTabsUI();
-      refreshPedestalsOnly();
-      aggregateGlobalStats();
+      switchMuseum(museumId);
 
-      statusMsg.style.color = "#43b581";
-      statusMsg.innerText = "Museum imported successfully!";
-      setTimeout(closeShareModal, 3000);
-
+      if (!importCode) {
+        statusMsg.style.color = "#43b581";
+        statusMsg.innerText = "Museum imported successfully!";
+        setTimeout(closeShareModal, 3000);
+      }
     }
   } catch (err) {
-    statusMsg.style.color = "#ff4a4a";
-    statusMsg.innerText = "Failed to import museum. Please check the code and try again.";
+    // TODO: Popup notification, full error in console.
+    if (!importCode) {
+      statusMsg.style.color = "#ff4a4a";
+      statusMsg.innerText = "Failed to import museum. Please check the code and try again.";
+    } else {
+      console.log("Failed to import museum.");
+    }
   }
 }
 
@@ -501,20 +526,24 @@ function openEditorModal(slotId) {
 
   const gemData = currentMuseum.gems[slotId];
 
-  const filteredCurrentGems = Object.entries(currentMuseum.gems).filter(([slotId, gemData]) => {
-    return slotId.startsWith(slotPrefix) && gemData.name !== "None";
+  const filteredCurrentGems = Object.entries(currentMuseum.gems).filter(([slotId, filterGemData]) => {
+    return slotId.startsWith(slotPrefix) && filterGemData.name !== "None";
   });
 
-  let oreOptions = `<option value="None">None (Empty)</option>`;
+  let oreOptions = `<option value="None">None</option>`
+  if (gemData.name !== "None") {
+    oreOptions += `<option value="${gemData.name}" selected>${gemData.name}</option>`;
+  }
+
   if (ORE_REGISTRY) {
     Object.entries(ORE_REGISTRY).forEach(([oreName, oreConfig]) => {
       if (oreConfig["rarity"] === targetRarity && !filteredCurrentGems.some(([_, gemData]) => gemData.name === oreName)) {
-        oreOptions += `<option value="${oreName}" ${gemData.name === oreName ? 'selected' : ''}>${oreName}</option>`;
+        oreOptions += `<option value="${oreName}">${oreName}</option>`;
       }
     })
   }
 
-  let modOptions = `<option value="None">None (Empty)</option>`;
+  let modOptions = `<option value="None">None</option>`;
   if (MODIFIER_REGISTRY) {
     Object.keys(MODIFIER_REGISTRY["modifiers"]).forEach(modName => {
       modOptions += `<option value="${modName}" ${gemData.modifier === modName ? 'selected' : ''}>${modName}</option>`;
@@ -752,7 +781,16 @@ async function bootstrapApplication() {
     bindPedestalListeners();
     bindActionButtons();
 
-    switchMuseum(AppState.activeMuseumId);
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("import")) {
+      handleMuseumImport(null, params.get("import"))
+
+      const url = new URL(window.location);
+      url.searchParams.delete("import");
+      window.history.replaceState({}, "", url);
+    } else {
+      switchMuseum(AppState.activeMuseumId);
+    }
   } catch (e) {
     console.error("Application Boot Failed:", e);
   }

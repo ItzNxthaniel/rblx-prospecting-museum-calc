@@ -389,7 +389,7 @@
       0
     ]
   },
-  "Meteroic Iron": {
+  "Meteoric Iron": {
     "rarity": "Rare",
     "maxWeight": 40,
     "boosts": [
@@ -623,7 +623,7 @@
       0
     ]
   },
-  "Meteroic Gold": {
+  "Meteoric Gold": {
     "rarity": "Epic",
     "maxWeight": 40,
     "boosts": [
@@ -1005,7 +1005,7 @@
     "rarity": "Mythic",
     "maxWeight": 20,
     "boosts": [
-      "DigStrength"
+      "Luck"
     ],
     "boostMults": [
       0.5,

@@ -31,6 +31,7 @@ function discoverGemSlots() {
 
 function switchMuseum(museumId) {
   AppState.activeMuseumId = museumId;
+  warnings = {};
   saveToLocalStorage();
 
   document.querySelectorAll(".museum-tabs .tab").forEach(tab => {
@@ -495,6 +496,9 @@ function refreshPedestalsOnly() {
         gemButton.classList.add("warning");
         warnings[slotId] = `Your ${gemData.name} is overweight. Stats will only be calculated up to ${ORE_REGISTRY[gemData.name].maxWeight}kg.`;
         updateNotice();
+      } else {
+        gemButton.classList.remove("warning");
+        delete warnings[slotId];
       }
 
       gemButton.setAttribute("data-info", tooltipText);
